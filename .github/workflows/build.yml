@@ -21,7 +21,7 @@ jobs:
       - name: Build Linux
         run: npx electron-builder --linux AppImage deb
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: EverBrowser-Linux
           path: dist/
@@ -42,7 +42,7 @@ jobs:
       - name: Build Windows
         run: npx electron-builder --win
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: EverBrowser-Windows
           path: dist/
