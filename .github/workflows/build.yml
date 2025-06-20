@@ -1,0 +1,48 @@
+name: Build Ever Browser
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - run: npm install
+      - run: npm install electron-builder --save-dev
+
+      - name: Build Linux
+        run: npx electron-builder --linux AppImage deb
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: EverBrowser-Linux
+          path: dist/
+
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - run: npm install
+      - run: npm install electron-builder --save-dev
+
+      - name: Build Windows
+        run: npx electron-builder --win
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: EverBrowser-Windows
+          path: dist/
