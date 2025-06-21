@@ -1,12 +1,12 @@
 ---
 name: Bug report
-about: Report unexpected behavior in Ever Browser
+about: Report unexpected behavior in Min
 title: ""
 labels: bug
 assignees: ""
 ---
 
-- **Ever Browser Version:**
+- **Min Version:**
 - **Operating system:**
 <!-- e.g. "Windows 10", "macOS 10.14" -->
 

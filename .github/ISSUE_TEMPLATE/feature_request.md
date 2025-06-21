@@ -6,4 +6,4 @@ labels: "feature request"
 assignees: ""
 ---
 
-<!-- To suggest a new feature, go here: https://github.com/minbrowser/ever-browser/discussions -->
+<!-- To suggest a new feature, go here: https://github.com/minbrowser/min/discussions -->
